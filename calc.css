@@ -1,0 +1,410 @@
+body {
+    background-color: #3b4664;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    transition: background-color 0.3s;
+}
+
+*{
+    font-family: 'League Spartan';
+    font-weight: 700;
+}
+
+.calculator {
+    text-align: center;
+}
+
+.calculator .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.calculator .header .title {
+    font-size: 24px;
+}
+
+.calculator .header .theme-switcher {
+    display: flex;
+    align-items: center;
+}
+
+.calculator .header .theme-switcher span {
+    margin-right: 10px;
+}
+
+.calculator .header .theme-switcher .switch {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.calculator .header .theme-switcher .switch input {
+    width: 60px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 15px;
+    background: #242d44;
+    border-radius: 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+.calculator .header .theme-switcher .switch input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #d03f2f;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.calculator .header .theme-switcher .switch input::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #d03f2f;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.calculator .display {
+    background-color: #181f33;
+    color: white;
+    font-size: 48px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: end;
+}
+
+.calculator .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.calculator .buttons button {
+    background-color: #eae3dc;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 20px 15px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.calculator .buttons button:hover {
+    background-color: #d1ccc0;
+}
+
+.calculator .buttons .del {
+    background-color: #647198;
+    color: white;
+}
+
+.calculator .buttons .del:hover {
+    background-color: #4a5a7a;
+}
+
+.calculator .buttons .reset {
+    background-color: #647198;
+    color: white;
+    grid-column: span 2;
+}
+
+.calculator .buttons .reset:hover {
+    background-color: #4a5a7a;
+}
+
+.calculator .buttons .equals {
+    background-color: #d03f2f;
+    color: white;
+    grid-column: span 2;
+}
+
+.calculator .buttons .equals:hover {
+    background-color: #b32e1f;
+}
+
+/* Theme 1 */
+body.theme-1 {
+    background-color: #3b4664;
+}
+
+body.theme-1 .calculator .display {
+    background-color: #181f33;
+}
+
+body.theme-1 .calculator .buttons button:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px #b0a391;
+}
+body.theme-1 .calculator .buttons .reset:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px #3e4a71;
+}
+body.theme-1 .calculator .buttons .del:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px #3e4a71;
+}
+body.theme-1 .calculator .buttons .equals:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px #8f2316;
+}
+
+body.theme-1 .calculator .buttons button {
+    background-color: #ebe2dc;
+    box-shadow: 0 5px #b0a391;
+}
+
+
+body.theme-1 .calculator .buttons .reset{
+    box-shadow: 0 5px #3e4a71;
+}
+body.theme-1 .calculator .buttons .del{
+    box-shadow: 0 5px #3e4a71;
+}
+body.theme-1 .calculator .buttons .equals{
+    box-shadow: 0 5px #8f2316;
+}
+
+body.theme-1 .calculator .buttons button:hover {
+    background-color: #fff;
+}
+
+body.theme-1 .calculator .buttons .del:hover,
+body.theme-1 .calculator .buttons .reset:hover {
+    background-color: #a2b2e2;
+}
+
+body.theme-1 .calculator .buttons .equals:hover {
+    background-color: #f96c5b;
+}
+
+body.theme-1 .calculator .buttons .del,
+body.theme-1 .calculator .buttons .reset {
+    background-color: #647198;
+}
+
+body.theme-1 .calculator .buttons .equals {
+    background-color: #d03f2f;
+}
+
+/* Theme 2 */
+body.theme-2 {
+    background-color:hsl(0, 0%, 90%);
+}
+body.theme-2 .calculator .title, 
+body.theme-2 .calculator .theme-switcher span,
+body.theme-2 .calculator .theme-switcher .switch label
+{
+    color: hsl(60, 10%, 19%);
+}
+
+
+body.theme-2 .calculator .display {
+    background-color: hsl(0, 0%, 93%);
+    color: hsl(60, 10%, 19%);
+
+    
+
+}
+
+body.theme-2 .calculator .buttons button:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px #b0a391;
+}
+body.theme-2 .calculator .buttons .reset:active,
+body.theme-2 .calculator .buttons .del:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px #287075;
+}
+
+body.theme-2 .calculator .buttons .equals:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px #903600;
+}
+
+body.theme-2 .calculator .buttons button {
+    background-color: #e5e4e0;
+    box-shadow: 0 5px #bab4aa;
+}
+
+
+body.theme-2 .calculator .buttons .reset,
+body.theme-2 .calculator .buttons .del{
+    box-shadow: 0 5px #287075;
+    background: #388187;
+}
+body.theme-2 .calculator .buttons .equals{
+    box-shadow: 0 5px #903600;
+    background: #c85401;
+
+    
+}
+
+body.theme-2 .calculator .buttons {
+    background-color: #d3cdcd;
+}
+body.theme-2 .calculator .buttons button:hover {
+    background-color: #fff;
+}
+
+body.theme-2 .calculator .buttons .del:hover,
+body.theme-2 .calculator .buttons .reset:hover {
+    background-color: #62b5bd;
+}
+body.theme-2 .calculator .buttons .equals:hover {
+    background-color: #ff8b38;
+}
+
+body.theme-2 .calculator .header .theme-switcher .switch input {
+    background: #d3cdcd;
+}
+body.theme-2 .calculator .header .theme-switcher .switch input::-webkit-slider-thumb,
+body.theme-2 .calculator .header .theme-switcher .switch input::-moz-range-thumb {
+    background: #c8570b;
+}
+
+
+/* Theme 3 */
+body.theme-3 {
+    background-color:#17062a;
+}
+body.theme-3 .calculator .title, 
+body.theme-3 .calculator .theme-switcher span,
+body.theme-3 .calculator .theme-switcher .switch label
+{
+    color: #ffe43c;
+}
+
+
+body.theme-3 .calculator .display {
+    background-color: #1e0836;
+    color: #ffe43c;
+
+    
+
+}
+
+body.theme-3 .calculator .buttons button:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px #5f1b78;
+}
+body.theme-3 .calculator .buttons .reset:active,
+body.theme-3 .calculator .buttons .del:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px #bf16f5;
+}
+
+body.theme-3 .calculator .buttons .equals:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px #63fef3;
+}
+
+body.theme-3 .calculator .buttons button {
+    background-color: #331b4d;
+    box-shadow: 0 5px #5f1b78;
+    color: #ffe43c;
+}
+
+
+body.theme-3 .calculator .buttons .reset,
+body.theme-3 .calculator .buttons .del{
+    box-shadow: 0 5px #bf16f5;
+    background: #56077c;
+    color: #fff;
+
+}
+body.theme-3 .calculator .buttons .equals{
+    box-shadow: 0 5px #63fef3;
+    background: #00decf;
+    color: #005954;
+
+    
+}
+
+body.theme-3 .calculator .buttons {
+    background-color: #1e0836;
+}
+body.theme-3 .calculator .buttons button:hover {
+    background-color: #6b34ac;
+}
+
+body.theme-3 .calculator .buttons .del:hover,
+body.theme-3 .calculator .buttons .reset:hover {
+    background-color: #8631b0;
+}
+body.theme-3 .calculator .buttons .equals:hover {
+    background-color: #94fff9;
+}
+
+body.theme-3 .calculator .header .theme-switcher .switch input {
+    background: #1e0836;
+}
+body.theme-3 .calculator .header .theme-switcher .switch input::-webkit-slider-thumb{
+    background: #00decf;
+}
+
+.switch label {
+    position: absolute;
+    margin-bottom: 30px;
+    letter-spacing: 20px;
+    margin-left: 5px;
+    font-size: x-small;
+
+}
+
+body.theme-1 .attribution {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 2rem;
+    color: #fff;
+  }
+
+  body.theme-1 .attribution a {
+    color: #d03f2f;
+  }
+  
+  body.theme-2 .attribution {
+    font-size: 15px;
+    color: hsl(60, 10%, 19%);
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  body.theme-2 .attribution a {
+    color: #c85401;
+  }
+
+  body.theme-3 .attribution {
+    font-size: 15px;
+    color: #ffe43c;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  body.theme-3 .attribution a {
+    color: #00decf;
+  }
+
+  @media (max-width: 1440px) {
+    .calculator{
+        margin: 2rem;
+    }
+  }
+  @media (max-width: 375px) {
+    .calculator{
+        margin: 5rem;
+    }
+  }
